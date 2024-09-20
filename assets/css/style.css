@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 100vw;
+}
+
+          /* CONTENEDORES GRID */
+
+.grid-container{
+    display: grid;
+    grid-template-rows: 0.7fr 1fr 35fr 1fr;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.menu-navegacion{
+    background-color: #00579c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-navegacion ul{
+    color: #00579c;
+}
+
+.titulo{
+    display: flex;
+    /* border: 1px solid red; */
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: x-large;
+    margin-left: 1em;
+
+}
+
+.menu-hamburguesa{
+    margin-right: 1em;
+    font-size: xx-large;
+}
+
+
+.seccion-principal{
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.filtros{
+    background-color: #e2e2e2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+.filtros p{
+    margin-top: 1em;
+    font-size: 25px;
+}
+
+select{
+    width: 80%;
+    height: 2em;
+}
+
+
+.pie-pagina{
+    background-color: #012f6b;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    gap: 1em;
+}
+
+
+/* CARDS AUTOS */
+
+.card{
+    border: 1px solid gray;
+    height: 38em;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+
+}
+
+.imagen{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.articulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+   /*  border: 1px solid red; */
+}
+
+button{
+    width: 50%;
+    background-color: #00579c;
+    color: white;
+    /* border: 1px solid red; */
+    margin-bottom: 10px;
+    border-radius: 15%;
+    border: #00579c;
+}
+
+button p{
+    padding: 1em 3em;
+    font-size: large;
+
+}
+
+.modelo{
+    font-size:25px;
+}
+
+.paginas{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+
+span a{
+    border: 1px solid rgb(128, 128, 128);
+    font-size: large;
+    padding: 10px;
+    color: blue;
+}
+
+
+
+
+@media (min-width:576px){
+    .grid-container{
+        grid-template-areas: 
+        'nav filtro'
+        'nav main'
+        'footer main';
+        grid-template-rows: 1fr 5fr 1fr;
+        grid-template-columns: 1fr 5fr;
+    }
+
+    .menu-navegacion{
+        grid-area: nav;
+      /*   border: 1px solid red; */
+        flex-direction: column;
+         
+    }
+    .titulo{
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 3em;
+       /*  border: 1px solid red; */
+        width: 100%;
+        margin-left: 0;
+        font-size: large;
+        height: 10%;
+    }
+
+    .menu-navegacion ul {
+        padding: 10px;
+        list-style: none;
+        color: white;
+        display: flex;
+        flex-direction: column;
+       /*  border: 1px solid red; */
+        width: 100%;
+        height: 90% ;
+        text-align: center;
+        font-size: large;
+        gap: 1em;
+        margin-top: 3em;
+        }
+    
+    .titulo span{
+        font-size: xx-large;
+        margin-top: 4px;
+    }
+
+    .menu-hamburguesa{
+        display: none;
+    }
+
+
+    .filtros{
+        grid-area: filtro;
+    }
+
+    .seccion-principal{
+        grid-area: main;
+        flex-wrap: wrap;
+        gap: 1;
+    }
+
+    .pie-pagina{
+        grid-area: footer;
+        font-size:smaller;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card{
+        width: 15em;
+        height: 25em;
+    }
+
+    button{
+        width: 50%;
+    
+    }
+    button p{
+        /* border: 1px solid red; */
+        width: 100%;
+        padding: 1em;
+    }
+    
+
+}
